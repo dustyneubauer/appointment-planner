@@ -9,6 +9,19 @@ export const ContactForm = ({
   setEmail,
   handleSubmit
 }) => {
+
+  const handleName = (e) => {
+    setName(e.target.value)
+  }
+
+  const handlePhone = (e) => {
+    setPhone(e.target.value)
+  }
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
