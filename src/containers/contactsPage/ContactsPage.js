@@ -3,15 +3,15 @@ import {ContactForm} from '../../components/contactForm/ContactForm';
 import {TileList} from '../../components/tileList/TileList';
 
 
-export const ContactsPage = (updateContacts, contacts) => {
+export const ContactsPage = ({ updateContacts, contacts }) => {
   /*
   Define state variables for 
   contact info and duplicate check
   */
- const {name, setName} = useState('');
- const {phone, setPhone} = useState('');
- const {email, setEmail} = useState('');
-const { duplicate, setDuplicate} = useState(false);
+ const [name, setName] = useState('');
+ const [phone, setPhone] = useState('');
+ const [email, setEmail] = useState('');
+const [duplicate, setDuplicate] = useState(false);
 
 const clearState = () => {
   setName('');
@@ -21,6 +21,9 @@ const clearState = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log('form data --> ', name, phone, email)
+    console.log('duplicate --> ', duplicate)
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
