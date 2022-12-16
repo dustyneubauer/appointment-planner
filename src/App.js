@@ -32,7 +32,7 @@ const updateContacts = (name, phone, email) => {
   });
 };
 
-const updateAppointments = (title, contact, date, time) => {
+const addAppointment = (title, contact, date, time) => {
   const newAppointment = {
     title: title,
     contact: contact,
@@ -70,6 +70,7 @@ const updateAppointments = (title, contact, date, time) => {
             {/* Add props to AppointmentsPage */}
             <AppointmentsPage 
             appointements={appointments}
+            addAppointment={addAppointment}
             />
           </Route>
         </Switch>
